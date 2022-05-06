@@ -1,15 +1,20 @@
+*{
+  margin: 0;
+
+}
+
 :root {
   /*primary colors*/
-  --green: rgb(0, 133, 111);
-  --green-light: rgb(220, 233, 226);
-  --green-light-02: rgb(247, 249, 249);
-  --beige: rgb(255, 250, 241);
-  --hover: rgb(0, 69, 58);
+  --green: hsl(170, 100%, 26%);
+  --green-light: hsl(148, 23%, 89%);
+  --green-light-02: hsl(180, 14%, 97%);
+  --beige: hsl(39, 100%, 97%);
+  --hover: hsl(170, 100%, 14%);
 
   /*secondary colors*/
-  --headline:rgb(33, 37, 41);
-  --paragraph: rgb(73, 80, 87);
-  --white: rgb(255, 255, 255);
+  --headline: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
+  --white: hsl(0, 0%, 100%);
 
   font-size: 62.5%; 
   
@@ -19,6 +24,13 @@
 body{
   font-family: 'DM Sans';
   font-size: 1.6rem;
+  text-align: center;
+}
+
+header{
+  width: 37.5rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 h1{
@@ -29,16 +41,25 @@ h1{
 
 h4{
   font-size: 1.4rem;
-  color: var(--brand-green);
+  color: var(--green);
 }
 
 p{
   font-size: 1.8rem;
-  color: hsl(210, 9%, 31%);
+  line-height: 150%;
   font-weight: 400;
-  
+  color: hsl(210, 9%, 31%);
 }
 
 button{
-  background-color: var(--brand-green);
+  background-color: var(--green);
+  border: none;
+  border-radius: 0.8rem;
 }
+
+img{
+
+}
+
+/*block tem toda a largura da pagina*/
+/*inline nao tem toda a largura da pagina*/
