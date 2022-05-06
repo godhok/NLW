@@ -1,5 +1,6 @@
 *{
   margin: 0;
+  box-sizing: border-box;
 
 }
 
@@ -43,6 +44,7 @@ h1{
   font-size: 3.4rem;
   color: var(--headline);
   line-height: 130%;
+
   margin-bottom: 2.4rem;
 }
 
@@ -50,8 +52,8 @@ p{
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
-  color: var(--paragraph);
   margin-bottom: 3.2rem;
+  color: var(--paragraph);
 }
 
 button{
