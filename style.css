@@ -1,4 +1,15 @@
 :root {
+  /*primary colors*/
+  --green: rgb(0, 133, 111);
+  --green-light: rgb(220, 233, 226);
+  --green-light-02: rgb(247, 249, 249);
+  --beige: rgb(255, 250, 241);
+  --hover: rgb(0, 69, 58);
+
+  /*secondary colors*/
+  --headline:rgb(33, 37, 41);
+  --paragraph: rgb(73, 80, 87);
+  --white: rgb(255, 255, 255);
 
   font-size: 62.5%; 
   
@@ -12,13 +23,22 @@ body{
 
 h1{
   font-size: 3.4rem;
+  color: var(--headline);
+  line-height: 130%;
 }
 
 h4{
   font-size: 1.4rem;
-  color: hsl(170, 100%, 26%);
+  color: var(--brand-green);
 }
 
 p{
   font-size: 1.8rem;
+  color: hsl(210, 9%, 31%);
+  font-weight: 400;
+  
+}
+
+button{
+  background-color: var(--brand-green);
 }
