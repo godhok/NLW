@@ -1,10 +1,8 @@
-/*======================= GERAL ==========================*/
-
-*{
+/*=================== GERAL=========================*/
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 :root {
@@ -28,6 +26,13 @@
   /* 1rem = 100% = 16px (normalmente) */
   /* 1rem = 62.5% = 10px (agora) */
 }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body{
   font-family: 'DM Sans';
   font-size: 1.6rem;
@@ -42,13 +47,14 @@ body{
   padding-inline: 2.4rem;
 }
 /*======================= HEADER =========================*/
+
 header{
   margin-top: calc(4.1rem + var(--nav-height));
 }
 
 header::before{
   content: '';
-  width: 100vw;
+  width: 100%;
   height: calc(108rem + var(--nav-height  ));
   background-color: var(--green-light);
   display:block;
@@ -87,6 +93,7 @@ header button{
 
   border: none;
   border-radius: 4rem;
+  
   margin-bottom: 6rem;
 
   height: 6.2rem;
@@ -116,24 +123,25 @@ header img{
 /*inline nao tem toda a largura da pagina*/
 
 .stats{
-  background-color: var(--beige);
   width: 32.7rem;
   padding-block: 4rem;
   margin-inline: auto;
+
+  background-color: var(--beige);
+  border: .1rem solid var(--green-light);
+  border-radius: .6rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 6rem;
-
-  border: .1rem solid var(--green-light);
-  border-radius: .6rem;
 }
 
 .stat h3{
   color: var(--headline);
   font-size: 4.8rem;
   line-height: 130%;
+
   margin-bottom: .4rem;
 }
 
@@ -144,12 +152,10 @@ header img{
   line-height: 150%;
 }
 
-/*===================== NAVIGATION =======================*/
+/*================== NAVIGATION =====================*/
 
 nav{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   height: var(--nav-height);
 
@@ -159,6 +165,20 @@ nav{
   transform: translateX(-50%);
 }
 
-nav.scroll{
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .scroll {
   background-color: var(--green);
+  width: 100vw ;
+  position: fixed;
+  top: 0;
+}
+
+nav .scroll svg path{
+  fill: var(--white);
+  stroke: var(--white);
 }
