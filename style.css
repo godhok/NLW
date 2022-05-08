@@ -171,14 +171,23 @@ nav .wrapper {
   justify-content: space-between;
 }
 
-nav .scroll {
-  background-color: var(--green);
-  width: 100vw ;
+nav.scroll {
+  background: var(--green);
+  width: 100vw;
   position: fixed;
   top: 0;
 }
 
-nav .scroll svg path{
+nav.scroll svg:nth-child(1) path {
   fill: var(--white);
+}
+
+nav.scroll svg:nth-child(2) path{
   stroke: var(--white);
 }
+
+/* nth-child()
+Serve pra procurar um item filho
+Opção 1 pra procurar o primeiro,
+Sucessivamente.
+*/
