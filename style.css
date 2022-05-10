@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  /*box-sizing border box é medir o tamanho do elemento pela borda da caixa e nao pelo tamanho do elemento*/
 }
 
 :root {
@@ -27,6 +29,10 @@
   /* 1rem = 62.5% = 10px (agora) */
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   width: 100%;
@@ -37,7 +43,7 @@ body {
   font-family: 'DM Sans';
   font-size: 1.6rem;
   text-align: center;
-
+  background-color: var(--green-light-02);
   overflow: overlay;
 }
 
@@ -50,6 +56,11 @@ body {
 ul {
   list-style: none;
 }
+
+section {
+ padding-block: 10rem;
+}
+
 /*======================= HEADER =========================*/
 
 header {
@@ -296,4 +307,42 @@ body.menu-expanded .logo path {
 
 body.menu-expanded path {
   stroke: var(--white);
-} 
+}
+
+/*========= services =============*/
+
+#services header h4{
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+
+  color: var(--green);
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+#services header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+  color: var(--headline);
+  margin-bottom: 6rem;
+}
+
+#services .cards{
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#services .card{
+  padding: 2.4rem;
+  text-align: left;
+  background-color: var(--white);
+  border: .1rem solid var(--green-light);
+  border-radius: .6rem;
+
+}
+
+#services .card h3{
+  margin-block: 1.6rem;
+}
