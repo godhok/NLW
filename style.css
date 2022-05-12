@@ -61,13 +61,13 @@ section {
  padding-block: 10rem;
 }
 
-/*======================= HEADER =========================*/
+/*======================= hOME =========================*/
 
-header {
-  margin-top: calc(4.1rem + var(--nav-height));
+#home {
+  padding-top: calc(4.1rem + var(--nav-height));
 }
 
-header::before {
+#home::before {
   content: '';
   width: 100%;
   height: calc(108rem + var(--nav-height  ));
@@ -80,13 +80,13 @@ header::before {
   z-index: -1;
 }
 
-header h4 {
+#home h4 {
   font-size: 1.4rem;
   color: var(--green);
   margin-bottom: 1.6rem;
 }
 
-header h1 {
+#home h1 {
   font-size: 3.4rem;
   color: var(--headline);
   line-height: 130%;
@@ -94,7 +94,7 @@ header h1 {
   margin-bottom: 2.4rem;
 }
 
-header p {
+#home p {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
@@ -103,7 +103,7 @@ header p {
   margin-bottom: 3.2rem;
 }
 
-header button {
+#home button {
   background-color: var(--green);
 
   border: none;
@@ -128,7 +128,7 @@ header button {
   margin-left: auto;
 }
 
-header img {
+#home img {
   width: 26.4rem;
   display: block;
   margin-inline: auto;
@@ -138,7 +138,7 @@ header img {
 /*block tem toda a largura da pagina*/
 /*inline nao tem toda a largura da pagina*/
 
-.stats {
+#home  .stats {
   width: 32.7rem;
   padding-block: 4rem;
   margin-inline: auto;
@@ -153,7 +153,7 @@ header img {
   gap: 6rem;
 }
 
-.stat h3{
+#home .stat h3{
   color: var(--headline);
   font-size: 4.8rem;
   line-height: 130%;
@@ -161,7 +161,7 @@ header img {
   margin-bottom: .4rem;
 }
 
-.stat p{
+#home .stat p{
   margin: 0;
   color: var(--green);
   font-size: 1.6rem;
