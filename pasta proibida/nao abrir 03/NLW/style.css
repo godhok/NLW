@@ -1,35 +1,27 @@
-/*=================== GERAL=========================*/
+/*=== GERAL =================================*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  /*box-sizing border box é medir o tamanho do elemento pela borda da caixa e nao pelo tamanho do elemento*/
 }
 
 :root {
-  /*primary colors*/
-  --green: hsl(170, 100%, 26%);
-  --green-light: hsl(148, 23%, 89%);
-  --green-light-02: hsl(180, 14%, 97%);
-  --beige: hsl(39, 100%, 97%);
-  --hover: hsl(170, 100%, 14%);
-
-  /*secondary colors*/
+  --primary-color: hsl(170, 100%, 26%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
-  --white: hsl(0, 0%, 100%);
 
-  /*setando o tamanho padrão pro nav*/
+  --brand-beige: hsl(39, 100%, 97%);
+  --brand-light: hsl(148, 23%, 89%);
+
+  --bg-light: hsl(180, 14%, 97%);
+
+  font-size: 62.5%; /* 1rem = 10px */
+
   --nav-height: 7.2rem;
-
-  font-size: 62.5%; 
-  
-  /* 1rem = 100% = 16px (normalmente) */
-  /* 1rem = 62.5% = 10px (agora) */
 }
 
-html{
+html {
+  /* chrome://flags/#smooth-scrolling */
   scroll-behavior: smooth;
 }
 
@@ -42,9 +34,12 @@ body {
 body {
   font-family: 'DM Sans';
   font-size: 1.6rem;
+
   text-align: center;
-  background-color: var(--green-light-02);
+
   overflow: overlay;
+
+  background-color: var(--bg-light);
 }
 
 .wrapper {
@@ -62,23 +57,22 @@ img {
 }
 
 section {
- padding-block: 10rem;
+  padding-block: 10rem;
 }
 
-section header h4{
+section header h4 {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0.08rem;
-  color: var(--green);
+  color: var(--primary-color);
 
   text-transform: uppercase;
 
   margin-bottom: 1.6rem;
 }
 
-
-section header h2{
+section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
 
@@ -100,9 +94,8 @@ section .content p {
 
   color: var(--paragraph);
 }
-
-/*================== NAVIGATION ==================*/
-nav{
+/*=== NAVIGATION =================================*/
+nav {
   display: flex;
 
   height: var(--nav-height);
@@ -110,6 +103,7 @@ nav{
   position: fixed;
   top: 0;
   width: 100vw;
+
   z-index: 100;
 }
 
@@ -120,31 +114,25 @@ nav .wrapper {
 }
 
 nav.scroll {
-  background: var(--green);
-
+  background: var(--primary-color);
 }
 
 nav.scroll .logo path {
-  fill: var(--white);
+  fill: white;
 }
 
-nav.scroll button path{
-  stroke: var(--white);
+nav.scroll button path {
+  stroke: white;
 }
 
-/* nth-child()
-Serve pra procurar um item filho
-Opção 1 pra procurar o primeiro,
-Sucessivamente.
-*/
-
-nav button{
+nav button {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-/*============== MENU EXPANDED =================*/
+
+/*=== MENU-EXPANDED =================================*/
 body.menu-expanded {
   overflow: hidden;
 }
@@ -166,7 +154,7 @@ body.menu-expanded .close-menu {
   visibility: visible;
 }
 
-.menu{
+.menu {
   transform: translateY(100%);
 }
 
@@ -174,7 +162,7 @@ body.menu-expanded .menu {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--green);
+  background: var(--primary-color);
 
   width: 100vw;
   height: 100vh;
@@ -182,29 +170,29 @@ body.menu-expanded .menu {
   padding-top: var(--nav-height);
 
   transition: transform 300ms;
-  transform : translateY(0);
+  transform: translateY(0);
+  
 }
 
-.menu ul:nth-child(1){
+.menu ul:nth-child(1) {
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
 
   margin-top: 6rem;
-  
+
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.1rem;
-
 }
 
-.menu ul li a{
-  color: var(--white);
+.menu ul li a {
+  color: white;
   text-decoration: none;
 }
 
 .menu .button {
-  background-color: var(--white);
+  background: white;
   border-radius: 4rem;
   font-weight: 700;
   font-size: 1.8rem;
@@ -212,7 +200,7 @@ body.menu-expanded .menu {
   text-transform: uppercase;
   text-decoration: none;
 
-  color: var(--green);
+  color: var(--primary-color);
 
   display: inline-block;
   padding: 16px 32px;
@@ -221,7 +209,7 @@ body.menu-expanded .menu {
   margin-bottom: 8rem;
 }
 
-.social-links{
+.social-links {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -229,23 +217,22 @@ body.menu-expanded .menu {
 }
 
 body.menu-expanded .logo,
-body.menu-expanded button{
+body.menu-expanded button {
   position: relative;
   z-index: 100;
 }
 
-
 body.menu-expanded .logo path {
-  fill: var(--white);
+  fill: white;
 }
 
-body.menu-expanded path {
-  stroke: var(--white);
+body.menu-expanded button path {
+  stroke: white;
 }
 
 
-/*=============== hEADER = hOME =========================*/
 
+/*=== #HOME =================================*/
 #home {
   padding-top: calc(4.1rem + var(--nav-height));
 }
@@ -253,16 +240,15 @@ body.menu-expanded path {
 #home::before {
   content: '';
   width: 100%;
-  height: calc(108rem + var(--nav-height  ));
-  background-color: var(--green-light);
-  display:block;
+  height: calc(108rem + var(--nav-height));
+  background-color: var(--brand-light);
+  display: block;
 
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
 }
-
 
 #home p {
   font-size: 1.8rem;
@@ -274,17 +260,17 @@ body.menu-expanded path {
 }
 
 #home button {
-  background-color: var(--green);
+  background: var(--primary-color);
 
   border: none;
   border-radius: 4rem;
-  
+
   margin-bottom: 6rem;
 
   height: 6.2rem;
   width: 26.3rem;
 
-  color: var(--white);
+  color: white;
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -305,17 +291,14 @@ body.menu-expanded path {
   object-position: 0 2rem;
 }
 
-/*block tem toda a largura da pagina*/
-/*inline nao tem toda a largura da pagina*/
-
-#home  .stats {
+#home .stats {
   width: 32.7rem;
   padding-block: 4rem;
   margin-inline: auto;
 
-  background-color: var(--beige);
-  border: .1rem solid var(--green-light);
-  border-radius: .6rem;
+  background-color: var(--brand-beige);
+  border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
 
   display: flex;
   flex-direction: column;
@@ -323,53 +306,54 @@ body.menu-expanded path {
   gap: 6rem;
 }
 
-#home .stat h3{
-  color: var(--headline);
+#home .stat h3 {
   font-size: 4.8rem;
+  color: var(--headline);
   line-height: 130%;
 
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
-#home .stat p{
+#home .stat p {
   margin: 0;
-  color: var(--green);
+  color: var(--primary-color);
   font-size: 1.6rem;
   line-height: 150%;
 }
 
-/*========= services =============*/
-#services h2 {
+/*=== SERVICES =================================*/
+#services header h2 {
   margin-bottom: 6rem;
 }
 
-#services .cards{
+#services .cards {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
 }
 
-#services .card{
+#services .card {
   padding: 2.4rem;
   text-align: left;
-  background: var(--white);
-  border: .1rem solid var(--green-light);
-  border-radius: .6rem;
+
+  background: white;
+
+  border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
 }
 
-#services .card h3{
+#services .card h3 {
   margin-block: 1.6rem;
 }
 
-/*========= About  =============*/
+/*=== ABOUT =================================*/
 #about {
-   text-align: left;
-
+  text-align: left;
+  background-color: var(--brand-beige);
 }
 
-#about header h2{
+#about header h2 {
   margin-bottom: 2.4rem;
-  background: var(--beige);
 }
 
 #about .content p {
