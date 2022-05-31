@@ -53,6 +53,10 @@ body {
   padding-inline: 2.4rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 ul {
   list-style: none;
 }
@@ -364,12 +368,12 @@ body.menu-expanded path {
 /*========= About  =============*/
 #about {
    text-align: left;
-
+   background-color: var(--beige);
 }
 
-#about header h2{
+#about header h2 {
   margin-bottom: 2.4rem;
-  background: var(--beige);
+  
 }
 
 #about .content p {
