@@ -23,13 +23,13 @@
   /*setando o tamanho padrão pro nav*/
   --nav-height: 7.2rem;
 
-  font-size: 62.5%; 
-  
+  font-size: 62.5%;
+
   /* 1rem = 100% = 16px (normalmente) */
   /* 1rem = 62.5% = 10px (agora) */
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -66,10 +66,10 @@ img {
 }
 
 section {
- padding-block: 10rem;
+  padding-block: 10rem;
 }
 
-section header h4{
+section header h4 {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 150%;
@@ -81,8 +81,7 @@ section header h4{
   margin-bottom: 1.6rem;
 }
 
-
-section header h2{
+section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
 
@@ -99,14 +98,14 @@ section header h1 {
 
 section .content p {
   font-weight: 400;
-  font-size: 1.6rem;  
-  line-height: 150%;  
+  font-size: 1.6rem;
+  line-height: 150%;
 
   color: var(--paragraph);
 }
 
 /*================== NAVIGATION ==================*/
-nav{
+nav {
   display: flex;
 
   height: var(--nav-height);
@@ -125,14 +124,13 @@ nav .wrapper {
 
 nav.scroll {
   background: var(--green);
-
 }
 
 nav.scroll .logo path {
   fill: var(--white);
 }
 
-nav.scroll button path{
+nav.scroll button path {
   stroke: var(--white);
 }
 
@@ -142,7 +140,7 @@ Opção 1 pra procurar o primeiro,
 Sucessivamente.
 */
 
-nav button{
+nav button {
   background: none;
   border: none;
   cursor: pointer;
@@ -170,7 +168,7 @@ body.menu-expanded .close-menu {
   visibility: visible;
 }
 
-.menu{
+.menu {
   transform: translateY(100%);
 }
 
@@ -186,23 +184,22 @@ body.menu-expanded .menu {
   padding-top: var(--nav-height);
 
   transition: transform 300ms;
-  transform : translateY(0);
+  transform: translateY(0);
 }
 
-.menu ul:nth-child(1){
+.menu ul:nth-child(1) {
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
 
   margin-top: 6rem;
-  
+
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.1rem;
-
 }
 
-.menu ul li a{
+.menu ul li a {
   color: var(--white);
   text-decoration: none;
 }
@@ -225,7 +222,7 @@ body.menu-expanded .menu {
   margin-bottom: 8rem;
 }
 
-.social-links{
+.social-links {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,11 +230,10 @@ body.menu-expanded .menu {
 }
 
 body.menu-expanded .logo,
-body.menu-expanded button{
+body.menu-expanded button {
   position: relative;
   z-index: 100;
 }
-
 
 body.menu-expanded .logo path {
   fill: var(--white);
@@ -246,7 +242,6 @@ body.menu-expanded .logo path {
 body.menu-expanded path {
   stroke: var(--white);
 }
-
 
 /*=============== hEADER = hOME =========================*/
 
@@ -257,16 +252,15 @@ body.menu-expanded path {
 #home::before {
   content: '';
   width: 100%;
-  height: calc(108rem + var(--nav-height  ));
+  height: calc(108rem + var(--nav-height));
   background-color: var(--green-light);
-  display:block;
+  display: block;
 
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
 }
-
 
 #home p {
   font-size: 1.8rem;
@@ -282,7 +276,7 @@ body.menu-expanded path {
 
   border: none;
   border-radius: 4rem;
-  
+
   margin-bottom: 6rem;
 
   height: 6.2rem;
@@ -312,14 +306,14 @@ body.menu-expanded path {
 /*block tem toda a largura da pagina*/
 /*inline nao tem toda a largura da pagina*/
 
-#home  .stats {
+#home .stats {
   width: 32.7rem;
   padding-block: 4rem;
   margin-inline: auto;
 
   background-color: var(--beige);
-  border: .1rem solid var(--green-light);
-  border-radius: .6rem;
+  border: 0.1rem solid var(--green-light);
+  border-radius: 0.6rem;
 
   display: flex;
   flex-direction: column;
@@ -327,15 +321,15 @@ body.menu-expanded path {
   gap: 6rem;
 }
 
-#home .stat h3{
+#home .stat h3 {
   color: var(--headline);
   font-size: 4.8rem;
   line-height: 130%;
 
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
-#home .stat p{
+#home .stat p {
   margin: 0;
   color: var(--green);
   font-size: 1.6rem;
@@ -347,33 +341,32 @@ body.menu-expanded path {
   margin-bottom: 6rem;
 }
 
-#services .cards{
+#services .cards {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
 }
 
-#services .card{
+#services .card {
   padding: 2.4rem;
   text-align: left;
   background: var(--white);
-  border: .1rem solid var(--green-light);
-  border-radius: .6rem;
+  border: 0.1rem solid var(--green-light);
+  border-radius: 0.6rem;
 }
 
-#services .card h3{
+#services .card h3 {
   margin-block: 1.6rem;
 }
 
 /*========= About  =============*/
 #about {
-   text-align: left;
-   background-color: var(--beige);
+  text-align: left;
+  background-color: var(--beige);
 }
 
 #about header h2 {
   margin-bottom: 2.4rem;
-  
 }
 
 #about .content p {
